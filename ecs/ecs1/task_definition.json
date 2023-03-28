@@ -1,0 +1,30 @@
+[
+    {
+        "name": "ecs-container",
+       "image": "vamsichunduru/ecs-demo:v1", 
+        "cpu": 10,
+        "memory": 512,
+        "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "clovis-jill-log-group",
+            "awslogs-region": "ap-southeast-2",
+            "awslogs-stream-prefix": "ecs"
+          }
+        },
+        "links": [],
+        "portMappings": [
+            { 
+                "hostPort": 80,
+                "containerPort": 80,
+                "protocol": "tcp"
+            }
+        ],
+        "essential": true,
+        "entryPoint": [],
+        "command": [],
+        "environment": [],
+        "mountPoints": [],
+        "volumesFrom": []
+    }
+  ]
