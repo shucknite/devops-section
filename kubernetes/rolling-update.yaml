@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment-rolling-update
-  namespace: rolling-update
+  namespace: default
 spec:
   replicas: 4
   selector:
